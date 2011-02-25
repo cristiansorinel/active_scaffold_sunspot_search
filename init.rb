@@ -1,0 +1,1 @@
+require 'active_scaffold_sunspot_search'
