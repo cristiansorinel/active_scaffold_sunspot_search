@@ -49,9 +49,8 @@ module ActiveScaffold::Actions
           keywords(query)
         end
       rescue Errno::ECONNREFUSED => e
-        @error = 'Documents search service is down!'
-        puts @error
-        return [] # :TODO - return error to interface
+        @error = 'Search service not available!'
+        return []
       end
       
       results = search.results
