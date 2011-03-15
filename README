@@ -41,8 +41,8 @@ To customize the search behavior override the `conditions_for_solr_search` in yo
 
 Solr paginates your result (Sunspot sets a default of 30 results per page).
 We should not try to paginate again using the database.
-I had the AS `find_page` function overridden to use data from Solr for
-pagination (bad) because it's pretty coupled.
+I had the AS `find_page` function overridden (bad) to use data from Solr for
+pagination because it's pretty coupled and has no extension API.
 So either we refactor `find_page` to expose an extension API,
 either (currently) we have to stay in sync with upstream by migrating any changes.
 
